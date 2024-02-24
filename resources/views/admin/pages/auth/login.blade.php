@@ -51,7 +51,7 @@
                                 <div class="auth-title text-center">
                                     <img src="{{ asset('template/base-admin/dist/assets/figma-assets/LOGO.png') }}" width="200" class="bg-primary rounded p-3" alt="">
                                     <h3>Selamat Datang</h3>
-                                    <p>Silahkan masuk PT. Maxxima Innovative Engineering</p>
+                                    <p>Silahkan masuk Exenesia Academy</p>
                                 </div>
                                 <form class="auth-form" action="{{ route('admin.login.store') }}" method="POST" enctype="multipart/form-data">
                                     @csrf

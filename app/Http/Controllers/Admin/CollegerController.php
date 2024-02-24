@@ -75,10 +75,12 @@ class CollegerController extends Controller
 
         if(isset($request->course)) {
             foreach ($request->course as $value) {
-                Course::create([
-                    'colleger_id' => $result->id,
-                    'name' => $value
-                ]);
+                if($value != null || $value != '') {
+                    Course::create([
+                        'colleger_id' => $result->id,
+                        'name' => $value
+                    ]);
+                }
             }
         }
 
@@ -146,10 +148,12 @@ class CollegerController extends Controller
         if(isset($request->course)) {
             Course::where('colleger_id', $id)->forceDelete();
             foreach ($request->course as $value) {
-                Course::create([
-                    'colleger_id' => $id,
-                    'name' => $value
-                ]);
+                if($value != null || $value != '') {
+                    Course::create([
+                        'colleger_id' => $id,
+                        'name' => $value
+                    ]);
+                }
             }
         }
 

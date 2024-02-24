@@ -18,8 +18,8 @@ class UserSeeder extends Seeder
     {
         $accounts = [
             [
-                'name' => 'Maxxima Technology',
-                'email' => 'maxxima.technology@gmail.com',
+                'name' => 'Exenesia Academy',
+                'email' => 'academy.exenesia.com',
                 'password' => bcrypt('admin123'),
                 'role' => 'super_admin',
                 'email_verified_at' => Carbon::now()->setTimeZone('Asia/Jakarta')
