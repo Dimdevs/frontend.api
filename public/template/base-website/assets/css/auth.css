@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ------------------------------------------------------------
+Component
+--------------------------------------------------------------*/
+:root {
+    /* Color */
+    --lightColor: #fff;
+    --primaryColor: #314bc8;
+    --darkColor: #292929;
+    --redColor: #314bc8;
+
+        /* Text */
+        --mainFont: "poppins", sans-serif;
+}
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+    font-family: var(--mainFont);
+    background: var(--lightColor);
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--darkColor);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    color: var(--primaryColor);
+    text-decoration: none;
+}
+
+p{
+    color: var(--darkColor);
+    font-family: var(--mainFont);
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: var(--mainFont);
+    color: var(--darkColor);
+}
+
+.btn:hover,
+.btn:focus{
+    transform: scale(0.98);
+    transition: 0.5s;
+}
+
+.btn-fill{
+    background-color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    color: var(--lightColor);
+}
+
+.btn-fill a,
+.btn-fill a:hover{
+    color: var(--lightColor);
+}
+
+.btn-outline{
+    border: 1px solid var(--primaryColor);
+    color: var(--mainFont);
+}
+
+.btn-outline a,
+.btn-outline a:hover{
+    color: var(--mainFont);
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: var(--lightColor);
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid var(--lightColor);
+    border-top-color: var(--primaryColor);
+    border-bottom-color: var(--primaryColor);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
+
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.auth-body {
+    display: flex;
+    flex-direction: column; /* Change to column direction */
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    background-color: var(--lightColor);
+}
+
+
+.auth-content,
+.image {
+    min-height: 100vh;
+}
+
+.auth-content{
+    position: relative;
+}
+
+.auth-body .bg-image {
+    background-image: url(../img/content.png);
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.auth-content h3{
+    margin: 10px 0;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.auth-content p{
+    color: #6D6D6D;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 22px;
+}
+
+.auth-content form label{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 2px 0;
+}
+
+.auth-content form .form-control{
+    border-radius: 6px;
+    border: 1px solid #CDCDCD;
+    background: #FAFAFA;
+    padding: 16px 14px 15px 14px;
+    color: #979797;
+    font-size: 16px;
+}
+
+.auth-content form .custom-control label{
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.auth-content .custom-control input:checked{
+    background-color: var(--primaryColor);
+    color: var(--lightColor);
+}
+
+.auth-content form a{
+    color: #314bc8;
+    text-align: right;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.auth-content form .confirm-btn{
+    width: -webkit-fill-available;
+    color: var(--lightColor);
+    padding: 12px 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    border-radius: 6px;
+    background: #314bc8;
+    box-shadow: 0px 1px 2px 0px rgba(105, 81, 255, 0.05);
+}
+
+.auth-content form .confirm-btn:hover,
+.auth-content form .confirm-btn:focus{
+    background-color: #273ca6;
+    transition: none;
+}
+
+.auth-content form .outline-btn:hover,
+.auth-content form .outline-btn:focus{
+    background-color: #fbfbfb;
+    transition: none;
+}
+
+.auth-content form .outline-btn{
+    width: -webkit-fill-available;
+    color: var(--redColor);
+    padding: 12px 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    border-radius: 6px;
+    border: 1px solid var(--primary-base, #314bc8);
+    background: #FFF;
+    box-shadow: 0px 1px 2px 0px rgba(105, 81, 255, 0.05);}

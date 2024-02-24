@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    /* color */
+    --darkColor : #333;
+    --primaryColor : #E30000;
+    --lightColor : #fff;
+    
+    /* font */
+    --mainFont: "poppins", sans-serif;
+}
+p,a{
+    font-family: var(--mainFont);
+    font-weight: 400;
+}
+
+.btn:hover,
+.btn:focus{
+    transform: scale(0.95);
+    transition: .4s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+Navbar
+--------------------------------------------------------------*/
+.silancar-nav {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 10px 0;
+    background: transparent;
+}
+
+.white-nav{
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 10px 0;
+    background: #fff;
+    background: #fff;
+    box-shadow: 0px 4px 64px 0px rgba(45, 45, 45, 0.15);
+}
+
+.user-nav{
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 10px 0;
+    background: transparent;
+}
+
+.user-nav .dropdown .dropdown-menu li{
+    margin-bottom: 20px;
+}
+
+.user-nav .dropdown .dropdown-menu .dropdown-item{
+    color: #292929;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0;
+}
+
+.user-nav .dropdown .dropdown-menu .dropdown-item svg{
+    margin-right: 20px;
+}
+
+.user-nav .dropdown .dropdown-menu .dropdown-item:hover{
+    color: var(--primaryColor);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #FFF;
+}
+
+.user-nav .dropdown .dropdown-menu{
+    transform: translateX(-20%);
+    border: none; 
+    padding: 20px 20px 0 20px;
+    border-radius: 0px 0px 8px 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+#navbar.navbar-scrolled,
+#navbar.navbar-pages {
+    background: #fff;
+    box-shadow: 0px 4px 64px 0px rgba(45, 45, 45, 0.15);
+}
+
+#navbar .nav-link{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--darkColor);
+}
+
+#navbar .nav-link:hover,
+#navbar .active,
+#navbar .active:focus,
+#navbar li:hover > .nav-link {
+    color: var(--darkColor);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media(max-width: 991px){
+    .sidebar{
+        background-color: var(--lightColor);
+        padding-bottom: 40px;
+    }
+
+    .user-nav .dropdown .dropdown-menu{
+        left: auto;
+        transform: translateY(10%);
+    }
+}
+
+@media(max-width: 425px){
+    .silancar-nav{
+        padding: 5px 0;
+    }
+
+    .silancar-nav .logo{
+        height: 90%;
+    }
+}

@@ -1,0 +1,13 @@
+/* Media Max-Width 375px */
+@media (max-width: 375px) {
+    .auth-content p,
+    .auth-content form a,
+    .auth-content form .custom-control label,
+    .auth-content form .form-control{
+        font-size: 14px;
+    }
+    
+    .auth-content form label{
+        font-size: 14px;
+    }
+}
